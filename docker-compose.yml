@@ -1,3 +1,16 @@
 service:
   rabbitmq:
     image: rabbitmq:3-management
+    container_name: rabbitmq
+    # Esta seção configura que o serviço será iniciado sempre que a máquina riniciar
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    # Esta seção configura onde serão armazenadas as informações (filas e mensagens) deste serviço
+    # OBS: É importante configurar isso, pois o padrão é ser armazenado dentro de um container, quando esse container é finalizado, os dados são junto
+    volumes:
+      - ./dados:/var/lib/rabbitmq/
+    environment:
+      - RABBITMQ_DEFAULT_USER: admin
+      - RABBITMQ_DEFAULT_PASS: 123456
