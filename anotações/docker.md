@@ -9,3 +9,6 @@ Os resultados dessas pesquisas são os repositórios com referencias dessa image
 * Ex: 5672:5672
   - Na esquerda é a porta da máquina, na direita a porta do docker. Esse é o processo de espelhar portas.
    - O mesmo vale para o values, esquerdo é a pasta do pc, direito é a do docker (achamos essa informação na página do serviço no docker hub, geralmente com nome `database dir`).
+
+# Comandos Docker
+## 
